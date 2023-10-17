@@ -16,6 +16,10 @@ const apolloServer = new ApolloServer({ typeDefs, resolvers });
 await apolloServer.start();
 app.use("/graphql", apolloMiddleware(apolloServer));
 
+app.get("/", (req, res) => {
+  res.send("Hello world!");
+});
+
 app.listen({ port: PORT }, () => {
   console.log(`Server running on port ${PORT}`);
   console.log(`GraphQL endpoint: http://localhost:${PORT}/graphql`);
