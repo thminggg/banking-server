@@ -12,4 +12,14 @@ Run the development server:
 npm run dev
 ```
 
-Open [http://localhost:9000](http://localhost:9000) with your browser to see the Graphql Appolo Server.
+ExpressJS server:
+
+```
+http://localhost:9000/
+```
+
+Appolo Server:
+
+```
+http://localhost:9000/graphql
+```
