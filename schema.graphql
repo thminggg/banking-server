@@ -1,3 +1,11 @@
 type Query {
   greeting: String
+  accounts: [Account!]
+}
+
+type Account {
+  id: ID
+  name: String
+  amount: Float
+  country: String
 }
