@@ -1,8 +1,10 @@
 type Query {
-  greeting: String
   accounts: [Account!]
 }
 
+"""
+Fields of a banking account
+"""
 type Account {
   id: ID
   name: String
