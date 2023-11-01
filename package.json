@@ -2,25 +2,26 @@
   "name": "banking-server",
   "version": "1.0.0",
   "description": "",
-  "type": "module",
   "scripts": {
-    "dev": "node ./src/server.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "clean": "rm -rf dist",
+    "compile": "yarn run clean && tsc && cp -r src/graphql/schema/typeDefs dist/graphql/schema/typeDefs",
+    "dev": "yarn run compile && node ./dist/server.js",
+    "dev:watch": "nodemon -e ts,graphql --ignore dist/ --exec \"yarn run dev\""
   },
   "keywords": [],
-  "author": "",
+  "author": "Patrick T",
   "license": "ISC",
   "dependencies": {
-    "@apollo/server": "^4.9.4",
+    "@apollo/server": "^4.0.0",
     "@graphql-tools/load-files": "^7.0.0",
     "@graphql-tools/merge": "^9.0.0",
-    "better-sqlite3": "^8.3.0",
-    "cors": "^2.8.5",
-    "express": "^4.18.2",
-    "express-jwt": "^8.4.1",
-    "graphql": "^16.8.1",
-    "jsonwebtoken": "^9.0.0",
-    "knex": "^2.4.2",
-    "nanoid": "^4.0.2"
+    "@graphql-tools/mock": "^8.7.6",
+    "@graphql-tools/schema": "^9.0.4",
+    "@graphql-tools/utils": "^10.0.8",
+    "graphql": "^16.6.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1",
+    "typescript": "^5.2.2"
   }
 }

@@ -1,4 +1,4 @@
-import { SupportedCountries } from "../types/account.js";
+import { SupportedCountries } from "../types/account";
 
 /* Mock account data */
 export const accounts = {
