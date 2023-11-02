@@ -4,7 +4,7 @@
   "description": "",
   "scripts": {
     "clean": "rm -rf dist",
-    "compile": "yarn run clean && tsc && cp -r src/graphql/schema/typeDefs dist/graphql/schema/typeDefs",
+    "compile": "yarn run clean && tsc && tsc-alias && cp -r src/graphql/schema/typeDefs dist/graphql/schema/typeDefs",
     "dev": "yarn run compile && node ./dist/server.js",
     "dev:watch": "nodemon -e ts,graphql --ignore dist/ --exec \"yarn run dev\""
   },
@@ -22,6 +22,7 @@
   },
   "devDependencies": {
     "nodemon": "^3.0.1",
+    "tsc-alias": "^1.8.8",
     "typescript": "^5.2.2"
   }
 }

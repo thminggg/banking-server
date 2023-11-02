@@ -3,13 +3,13 @@
 Install npm packages:
 
 ```bash
-npm install
+yarn
 ```
 
 Run the development server:
 
 ```bash
-npm run dev
+yarn run dev
 ```
 
 ExpressJS server:
