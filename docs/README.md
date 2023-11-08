@@ -6,10 +6,13 @@ This repository is to demonstrate a mock backend server for a banking web applic
 
 1. GraphQL
 2. Express
-3. Typescript
-4. JWT
+3. Docker
+4. Typescript
+5. JWT
 
 ## Getting Started
+
+Run server in localhost or in [Docker](#docker) (see below)
 
 ### Install npm packages:
 
@@ -26,13 +29,13 @@ yarn run dev
 yarn run dev:watch
 ```
 
-### Express Route:
+### Express Route
 
 ```
 http://localhost:9000
 ```
 
-### Appolo Server:
+### Appolo Server
 
 ```
 http://localhost:9000/graphql
@@ -81,3 +84,26 @@ mutation Transfer {
   }
 }
 ```
+
+## Docker
+
+### Build docker image
+
+```bash
+docker build -t express-graphql .
+```
+
+### Run docker container
+
+```bash
+# i.e. docker run -d -p 9000:9000 express-graphql
+docker run -d -p <available_port>:9000 express-graphql
+```
+
+### Access Server
+
+Refer to above [Express Route](#express-route) & [Appolo Server](#appolo-server)
+
+### Query & Mutation
+
+Refer to above [Query](#query) & [Mutation](#mutation)

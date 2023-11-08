@@ -1,0 +1,12 @@
+/diff-npm-package.html
+/.eslintcache
+/.cspellcache
+/.docusaurus
+/.stryker-tmp
+/node_modules
+/reports
+/npmDist
+/npmEsmDist
+/denoDist
+/websiteDist
+/dist
