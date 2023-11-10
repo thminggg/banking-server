@@ -9,7 +9,8 @@ This repository is to demonstrate a mock backend server for a banking web applic
 3. Docker
 4. AWS Lambda
 5. Typescript
-6. JWT
+6. Bash script
+7. JWT
 
 ## Getting Started
 
