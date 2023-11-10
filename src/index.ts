@@ -5,12 +5,12 @@ import "dotenv/config";
 import express from "express";
 import { Request as JWTRequest, expressjwt } from "express-jwt";
 import * as jwt from "jsonwebtoken";
+import serverless from "serverless-http";
 import resolvers from "./graphql/resolvers/index";
 import typeDefs from "./graphql/schema/index";
+const app = express();
 
 const main = async () => {
-  const PORT = 9000;
-  const app = express();
   app.use(cors(), express.json());
 
   // GraphQL
@@ -46,10 +46,16 @@ const main = async () => {
     res.send("Authorized access!");
   });
 
-  app.listen({ port: PORT }, () => {
-    console.log(`Server running on port ${PORT}`);
-    console.log(`GraphQL endpoint: http://localhost:${PORT}/graphql`);
-  });
+  return app;
 };
 
-main();
+const serverlessExpress = serverless(app);
+
+const handler = async (event, context) => {
+  await main();
+  console.log(event, context);
+  const result = await serverlessExpress(event, context);
+  return result;
+};
+
+export { handler };
