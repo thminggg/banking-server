@@ -1,6 +1,6 @@
-## Backend server of a Banking Web App
+## Banking Web App Server
 
-This repository is to demonstrate a mock backend server for a banking web application which handles authentication, data retrieval and transactions.
+This repository demonstrates a mock backend server for a banking web application which handles authentication, data retrieval and transactions.
 
 ## Tech Stack
 
@@ -98,8 +98,8 @@ docker build -t express-graphql .
 ### Run docker container
 
 ```bash
-# i.e. docker run -d -p 9000:9000 express-graphql
-docker run -d -p <available_port>:9000 express-graphql
+# i.e. docker run -d -p 9000:9000 --name express-graphql express-graphql
+docker run -d -p <available_port>:9000 --name express-graphql express-graphql
 ```
 
 ### Access Server
