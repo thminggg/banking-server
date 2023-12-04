@@ -2,6 +2,9 @@
 
 This repository demonstrates a mock backend server for a banking web application which handles authentication, data retrieval and transactions.
 
+## Demo
+https://github.com/thminggg/banking-server/assets/17175914/d3c9897a-3f64-4143-8b55-a2ddb1841e48
+
 ## Tech Stack
 
 1. GraphQL
